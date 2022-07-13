@@ -17,7 +17,7 @@ export class CicdService {
   constructor(private http : HttpClient) { }
 
   getTest() {
-    console.log('fetching test api');
+    console.log('fetching test api ', this.apiUrl+this.testApi);
     return this.http.get<any>(this.apiUrl+this.testApi).pipe(
       catchError(this.handleError),
       map ( (res: HttpResponse<any>) => this.handleResponse(res))

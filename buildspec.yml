@@ -20,7 +20,7 @@ phases:
       - cd ..
       - cd cicd-back
       - echo $(pwd)
-      - chmod +x ./gradlew
+      - chmod +x gradlew
       - ./gradlew clean build
       - echo $(ls -l)
   post_build:

@@ -35,7 +35,7 @@ phases:
 artifacts:
   files:
     - '*0.1.war'
-  base-directory: 'build/libs'
+  base-directory: 'cicd-back/build/libs'
   discard-paths: yes
 cache:
   paths:

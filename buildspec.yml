@@ -29,7 +29,7 @@ phases:
 artifacts:
   files:
     - '*-0.1.war'
-  base-directory: '/cicd-back/build/libs'
+  base-directory: 'build/libs'
 cache:
   paths:
     - '/root/.gradle/caches/**/*'

@@ -27,7 +27,7 @@ phases:
     commands:
       - echo "entering into post build phase"
       - cd build/libs/
-      - echo $(pwd)
+      - echo $(pwd) 
       - echo $(ls -l)
     finally:
       - rm -f  /root/.gradle/caches/modules-2/modules-2.lock

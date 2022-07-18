@@ -21,18 +21,21 @@ phases:
       - cd cicd-back
       - echo $(pwd)
       - chmod +x gradlew
-      - ./gradlew clean build
+      - ./gradlew clean build --scan
       - echo $(ls -l)
   post_build:
     commands:
       - echo "entering into post build phase"
-      - cd build
+      - cd build/libs/
       - echo $(pwd)
       - echo $(ls -l)
+    finally:
+      - rm -f  /root/.gradle/caches/modules-2/modules-2.lock
+      - rm -fr /root/.gradle/caches/*/plugin-resolution/
 artifacts:
   files:
-    - build/libs/*0.1.war
-    - scripts/**
+    - '*0.1.war'
+  base-directory: 'build/libs'
   discard-paths: yes
 cache:
   paths:

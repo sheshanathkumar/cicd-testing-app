@@ -34,8 +34,9 @@ phases:
       - rm -fr /root/.gradle/caches/*/plugin-resolution/
 artifacts:
   files:
-    - '*0.1.war'
-  base-directory: 'cicd-back/build/libs'
+    - '..elasticbeanstalk/config.yml'
+    - 'build/libs/*0.1.war'
+  base-directory: 'cicd-back/'
 cache:
   paths:
     - '/root/.gradle/caches/**/*'

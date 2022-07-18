@@ -26,10 +26,12 @@ phases:
   post_build:
     commands:
       - echo "entering into post build phase"
+      - cd build
+      - echo $(pwd)
+      - echo $(ls -l)
 artifacts:
   files:
-    - '*-0.1.war'
-  base-directory: 'build/libs'
+    - build/libs/cicd-test-0.1.war
 cache:
   paths:
     - '/root/.gradle/caches/**/*'

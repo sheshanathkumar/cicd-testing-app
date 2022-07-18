@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       nodejs: 16
       java: corretto11
-  pre-build:
+  pre_build:
     commands:
       - echo "entering into pre build phase (installing UI application)"
       - cd cicd-ui
@@ -21,7 +21,7 @@ phases:
       - cd cicd-back
       - echo $(pwd)
       - ./gradlew clean build --scan
-  post-build:
+  post_build:
     commands:
       - echo "entering into post build phase"
     finally:

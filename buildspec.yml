@@ -8,18 +8,18 @@ phases:
     commands:
       - echo "entering into pre build phase (installing UI application)"
       - cd cicd-ui
-      - echo "current dir: $(pwd)"
+      - echo $(pwd)
       - npm install
       - npm install -g @angular/cli
       - echo "angular install done"
-      - echo "current dir: $(pwd)"
+      - echo $(pwd)
       - npm run build -- --prod
   build:
     commands:
       - echo "entering into war file build phase"
       - cd ..
       - cd cicd-back
-      - echo "current dir: $(pwd)"
+      - echo $(pwd)
       - ./gradlew clean build --scan
   post-build:
     commands:

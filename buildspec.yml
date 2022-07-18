@@ -31,7 +31,7 @@ phases:
       - echo $(ls -l)
 artifacts:
   files:
-    - build/libs/cicd-test-0.1.war
+    - 'build/libs/cicd-test-0.1.war'
 cache:
   paths:
     - '/root/.gradle/caches/**/*'

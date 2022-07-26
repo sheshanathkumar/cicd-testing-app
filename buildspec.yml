@@ -34,8 +34,8 @@ phases:
       - rm -fr /root/.gradle/caches/*/plugin-resolution/
 artifacts:
   files:
-    - '*0.1.war'
-  base-directory: 'cicd-back/build/libs'
+    - 'cicd-back/build/libs/*0.1.war'
+  discard-paths: yes
 cache:
   paths:
     - '/root/.gradle/caches/**/*'

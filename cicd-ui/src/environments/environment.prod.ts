@@ -1,4 +1,4 @@
 export const environment = {
-  api_url: 'http://Cicdpipe-env.eba-3bnszxpn.ap-south-1.elasticbeanstalk.com',
+  api_url: 'http://cicdpipe1-env.ap-south-1.elasticbeanstalk.com',
   production: true
 };

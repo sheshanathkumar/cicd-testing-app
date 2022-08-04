@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  api_url: 'http://localhost:9090',
+  api_url: 'http://localhost:5000/cicd-test-0.1',
   production: false
 };
 

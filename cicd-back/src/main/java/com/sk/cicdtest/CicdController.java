@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/cicd-test-0.1")
+//@RequestMapping("/cicd-test-0.1")
 public class CicdController {
 
     private static final Logger logger = LogManager.getLogger(CicdController.class);

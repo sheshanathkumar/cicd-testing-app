@@ -10,8 +10,8 @@ import { catchError, map } from 'rxjs/operators'
 export class CicdService {
 
   private apiUrl: string = environment.api_url;
-  private testApi: string = '/test';
-  private testEnv : string = '/env';
+  private testApi: string = '/cicd-test-0.1/test';
+  private testEnv : string = '/cicd-test-0.1/env';
 
 
   constructor(private http : HttpClient) { }

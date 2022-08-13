@@ -24,7 +24,7 @@ export class DigitalWatchComponent implements OnInit {
     this.cicdService.getTest().subscribe(
       (data) => {
         console.log(data);
-        this.test = data.msg +"! status="+data.code;
+        this.test = data.msg +"! current status="+data.code;
       }
     );
   }

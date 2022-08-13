@@ -2,7 +2,7 @@
 <Configuration>
 	
 	<Properties>
-		<Property name="logPath">C:/logs/</Property>
+		<Property name="logPath">/home/logs/</Property>
 		<Property name="logPattern">[%-5level] %d{yyyy-MM-dd HH:mm:ss} {%t} %c{1}.%M-\{%line\} %m %n</Property>
 	</Properties>
 

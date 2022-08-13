@@ -22,7 +22,7 @@ public class CicdController {
     @GetMapping("/test")
     public ResponseEntity<ModelApi> testController () {
         logger.info("fetching test api");
-        return new ResponseEntity<>(new ModelApi(200, "Controller is working, current success", "SUCCESS"), HttpStatus.OK);
+        return new ResponseEntity<>(new ModelApi(200, "Controller is working, SVM Poll=", "SUCCESS"), HttpStatus.OK);
     }
 
     @GetMapping("/env")

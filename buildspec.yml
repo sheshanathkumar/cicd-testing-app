@@ -1,0 +1,42 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+      java: corretto11
+  pre_build:
+    commands:
+      - echo "entering into pre build phase (installing UI application)"
+      - cd cicd-ui
+      - echo $(pwd)
+      - npm install
+      - npm install -g @angular/cli
+      - echo "angular install done"
+      - echo $(pwd)
+      - npm run build -- --prod
+  build:
+    commands:
+      - echo "entering into war file build phase"
+      - cd ..
+      - cd cicd-back
+      - echo $(pwd)
+      - chmod +x gradlew
+      - ./gradlew clean build --scan
+      - echo $(ls -l)
+  post_build:
+    commands:
+      - echo "entering into post build phase"
+      - cd build/libs/
+      - echo $(pwd)
+      - echo $(ls -l)
+    finally:
+      - rm -f  /root/.gradle/caches/modules-2/modules-2.lock
+      - rm -fr /root/.gradle/caches/*/plugin-resolution/
+artifacts:
+  files:
+    - 'cicd-back/build/libs/*0.1.war'
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.gradle/caches/**/*'
+    - '/root/.gradle/wrapper/**/*'

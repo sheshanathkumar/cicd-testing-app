@@ -1,0 +1,2 @@
+deploy:
+  artifact: build/libs/cicd-test-0.1.war

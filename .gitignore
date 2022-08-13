@@ -2,6 +2,7 @@ cicd-ui/dist
 cicd-ui/.vscode
 cicd-ui/node_modules
 cicd-ui/Product.json
+cicd-ui/package-lock.json
 
 ### STS ###
 cicd-back/.apt_generated
